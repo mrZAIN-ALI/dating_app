@@ -24,7 +24,7 @@ class CustomCheckbox extends StatelessWidget {
           text,
           style: Theme.of(context)
               .textTheme
-              .headline4!
+              .headlineLarge!
               .copyWith(fontWeight: FontWeight.normal),
         ),
       ],

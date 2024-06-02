@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget  {
   final String title;
   final bool hasActions;
 
@@ -40,7 +40,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
               title,
               style: Theme.of(context)
                   .textTheme
-                  .headline2!
+                  .displayMedium!
                   .copyWith(color: Theme.of(context).primaryColor),
             ),
           ),

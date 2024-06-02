@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'DISCOVER'),
+      appBar: CustomAppBar(title: 'DISCOVER') as PreferredSizeWidget,
       body: BlocBuilder<SwipeBloc, SwipeState>(
         builder: (context, state) {
           if (state is SwipeLoading) {
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                           print('Swiped Right');
                         },
                         child: ChoiceButton(
-                          color: Theme.of(context).accentColor,
+                          color: Theme.of(context).colorScheme.secondary,
                           icon: Icons.clear_rounded,
                         ),
                       ),
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
           if (state is SwipeError) {
             return Center(
               child: Text('There aren\'t any more users.',
-                  style: Theme.of(context).textTheme.headline4),
+                  style: Theme.of(context).textTheme.headlineLarge),
             );
           } else {
             return Text('Something went wrong.');

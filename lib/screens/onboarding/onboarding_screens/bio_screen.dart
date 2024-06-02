@@ -69,7 +69,7 @@ class Bio extends StatelessWidget {
                       totalSteps: 6,
                       currentStep: 5,
                       selectedColor: Theme.of(context).primaryColor,
-                      unselectedColor: Theme.of(context).backgroundColor,
+                      unselectedColor: Theme.of(context).colorScheme.surface,
                     ),
                     SizedBox(height: 10),
                     CustomButton(

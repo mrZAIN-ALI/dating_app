@@ -23,7 +23,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         elevation: 0,
         iconTheme: IconThemeData(
           color: Theme.of(context).primaryColor,
@@ -36,7 +36,7 @@ class ChatScreen extends StatelessWidget {
             ),
             Text(
               userMatch.matchedUser.name,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineLarge,
             )
           ],
         ),
@@ -64,13 +64,13 @@ class ChatScreen extends StatelessWidget {
                                               Radius.circular(8.0),
                                             ),
                                             color: Theme.of(context)
-                                                .backgroundColor),
+                                                .colorScheme.surface),
                                         child: Text(
                                           userMatch
                                               .chat![0].messages[index].message,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline6,
+                                              .headlineSmall,
                                         ),
                                       ),
                                     )
@@ -99,7 +99,7 @@ class ChatScreen extends StatelessWidget {
                                                   .message,
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline6!
+                                                  .headlineSmall!
                                                   .copyWith(
                                                     color: Colors.white,
                                                   ),
@@ -128,7 +128,7 @@ class ChatScreen extends StatelessWidget {
                       'Sign Out',
                       style: Theme.of(context)
                           .textTheme
-                          .headline5!
+                          .headlineMedium!
                           .copyWith(color: Theme.of(context).primaryColor),
                     ),
                   ),

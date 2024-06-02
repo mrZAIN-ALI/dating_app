@@ -23,14 +23,14 @@ class MatchesScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'MATCHES'),
+      appBar: CustomAppBar(title: 'MATCHES') as PreferredSizeWidget,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Your Likes', style: Theme.of(context).textTheme.headline4),
+              Text('Your Likes', style: Theme.of(context).textTheme.headlineLarge),
               SizedBox(
                 height: 100,
                 child: ListView.builder(
@@ -49,7 +49,7 @@ class MatchesScreen extends StatelessWidget {
                           ),
                           Text(
                             inactiveMatches[index].matchedUser.name,
-                            style: Theme.of(context).textTheme.headline5,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                         ],
                       );
@@ -58,7 +58,7 @@ class MatchesScreen extends StatelessWidget {
               SizedBox(height: 10),
               Text(
                 'Your Chats',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               ListView.builder(
                   shrinkWrap: true,
@@ -82,7 +82,7 @@ class MatchesScreen extends StatelessWidget {
                             children: [
                               Text(
                                 activeMatches[index].matchedUser.name,
-                                style: Theme.of(context).textTheme.headline5,
+                                style: Theme.of(context).textTheme.headlineMedium,
                               ),
                               SizedBox(height: 5),
                               Text(
@@ -90,7 +90,7 @@ class MatchesScreen extends StatelessWidget {
                                     .chat![0]
                                     .messages[0]
                                     .message,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                               SizedBox(height: 5),
                               Text(
@@ -98,7 +98,7 @@ class MatchesScreen extends StatelessWidget {
                                     .chat![0]
                                     .messages[0]
                                     .timeString,
-                                style: Theme.of(context).textTheme.bodyText1,
+                                style: Theme.of(context).textTheme.bodyLarge,
                               ),
                             ],
                           )

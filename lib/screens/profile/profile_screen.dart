@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: 'PROFILE',
-      ),
+      ) as PreferredSizeWidget,
       body: SingleChildScrollView(
         child: BlocBuilder<ProfileBloc, ProfileState>(
           builder: (context, state) {
@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                             state.user.name,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline1!
+                                .displayLarge!
                                 .copyWith(color: Colors.white),
                           ),
                         ),
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                           state.user.bio,
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText1!
+                              .bodyLarge!
                               .copyWith(height: 1.5),
                         ),
                         TitleWithIcon(title: 'Pictures', icon: Icons.edit),
@@ -109,7 +109,7 @@ class ProfileScreen extends StatelessWidget {
                           state.user.location,
                           style: Theme.of(context)
                               .textTheme
-                              .bodyText1!
+                              .bodyLarge!
                               .copyWith(height: 1.5),
                         ),
                         TitleWithIcon(title: 'Interest', icon: Icons.edit),
@@ -130,7 +130,7 @@ class ProfileScreen extends StatelessWidget {
                               'Sign Out',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5!
+                                  .headlineMedium!
                                   .copyWith(
                                       color: Theme.of(context).primaryColor),
                             ),
@@ -168,7 +168,7 @@ class TitleWithIcon extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.headline3,
+          style: Theme.of(context).textTheme.displaySmall,
         ),
         IconButton(
           icon: Icon(icon),

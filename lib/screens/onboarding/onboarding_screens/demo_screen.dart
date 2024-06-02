@@ -90,7 +90,7 @@ class Demo extends StatelessWidget {
                       totalSteps: 6,
                       currentStep: 3,
                       selectedColor: Theme.of(context).primaryColor,
-                      unselectedColor: Theme.of(context).backgroundColor,
+                      unselectedColor: Theme.of(context).colorScheme.surface,
                     ),
                     SizedBox(height: 10),
                     CustomButton(

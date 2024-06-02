@@ -21,7 +21,7 @@ class CustomTextContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           gradient: LinearGradient(
             colors: [
-              Theme.of(context).accentColor,
+              Theme.of(context).colorScheme.secondary,
               Theme.of(context).primaryColor,
             ],
           ),
@@ -31,7 +31,7 @@ class CustomTextContainer extends StatelessWidget {
             text,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .headlineSmall!
                 .copyWith(color: Colors.white),
           ),
         ),

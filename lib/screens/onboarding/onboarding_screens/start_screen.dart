@@ -28,13 +28,13 @@ class Start extends StatelessWidget {
               ),
               SizedBox(height: 50),
               Text('Welcome to Arrow',
-                  style: Theme.of(context).textTheme.headline2),
+                  style: Theme.of(context).textTheme.displayMedium),
               SizedBox(height: 20),
               Text(
                 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .headlineSmall!
                     .copyWith(height: 1.8),
                 textAlign: TextAlign.center,
               ),

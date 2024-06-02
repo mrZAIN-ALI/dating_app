@@ -33,7 +33,7 @@ class OnboardingScreen extends StatelessWidget {
           appBar: CustomAppBar(
             title: 'ARROW',
             hasActions: false,
-          ),
+          ) as PreferredSizeWidget,
           body: TabBarView(
             children: [
               Start(tabController: tabController),
